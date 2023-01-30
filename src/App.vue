@@ -3,5 +3,7 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <RouterView />
+  <main class="w-4/5 mx-auto pt-12">
+    <RouterView />
+  </main>
 </template>

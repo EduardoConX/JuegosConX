@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <img :src="`./src/assets/${props.attempts}.png`" :alt="'localAttprops.attemptsempts'" />
+  <img :src="`./src/assets/${props.attempts}.png`" :alt="'localAttprops.attemptsempts'" class="mx-auto" />
 </template>
 
 <style scoped>

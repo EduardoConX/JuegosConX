@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-black {
+    @apply bg-black py-2 px-4 rounded-md border-solid border-black border-2 hover:border-green-500;
+  }
+}
+
 body {
   background-color: #242424;
-
   min-height: 100vh;
 }

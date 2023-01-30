@@ -43,23 +43,22 @@ const newGame = () => {
 </script>
 
 <template>
-  <HangImage :attempts="attempts" />
-  <h2>{{ hiddenWord }}</h2>
-  <h3>Intentos: {{ attempts }}</h3>
-  <p v-if="lose">Usted ha perdido, la palabra era {{ word }}</p>
-  <p v-if="won">Usted ha ganado, felicidades</p>
-  <button
-    v-for="letter in letters"
-    :key="letter"
-    @click="() => checkLetter(letter)"
-  >
-    {{ letter }}
-  </button>
-  <button @click="newGame">Nuevo juego</button>
+  <div class="text-center text-white text-2xl">
+    <HangImage :attempts="attempts" />
+    <h2 class="font-bold text-3xl mb-2">{{ hiddenWord }}</h2>
+    <h3 class="font-bold">Intentos: {{ attempts }}</h3>
+    <p v-if="lose">Usted ha perdido, la palabra era {{ word }}</p>
+    <p v-if="won">Usted ha ganado, felicidades</p>
+    <div class="my-4">
+      <button
+        v-for="letter in letters"
+        :key="letter"
+        @click="() => checkLetter(letter)"
+        class="m-1.5 btn-black"
+      >
+        {{ letter }}
+      </button>
+    </div>
+    <button @click="newGame" class="m-1.5 btn-black">Nuevo juego</button>
+  </div>
 </template>
-
-<style scoped>
-button {
-  margin: 5px;
-}
-</style>

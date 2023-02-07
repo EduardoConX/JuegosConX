@@ -3,8 +3,16 @@ import usePokemons from "../composables/usePokemon";
 import PokemonPicture from "../components/PokemonPicture.vue";
 import PokemonOptions from "../components/PokemonOptions.vue";
 
-const { pokemons, pokemon, showPokemon, level, hasLose, message, resetGame } =
-  usePokemons();
+const {
+  pokemons,
+  pokemon,
+  showPokemon,
+  level,
+  hasLose,
+  message,
+  resets,
+  resetGame,
+} = usePokemons();
 
 const checkAnswer = (pokemonId: number) => {
   showPokemon.value = true;
@@ -19,6 +27,7 @@ const checkAnswer = (pokemonId: number) => {
 };
 
 const handleNext = () => {
+  resets.value += 1;
   if (!hasLose.value) {
     level.value++;
     return;

@@ -8,6 +8,7 @@ const showPokemon = ref(false);
 const level = ref(1);
 const hasLose = ref(false);
 const message = ref('');
+const resets = ref(0);
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
@@ -52,7 +53,7 @@ const resetGame = () => {
     if (level.value != 1) level.value = 1;
 }
 
-watch(level, async () => {
+watch(resets, async () => {
     pokemon.value = undefined;
     showPokemon.value = false;
     message.value = '';
@@ -75,6 +76,7 @@ const usePokemons = () => {
         level,
         hasLose,
         message,
+        resets,
         resetGame
     }
 }

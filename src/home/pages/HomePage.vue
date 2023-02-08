@@ -4,10 +4,19 @@
   <div>
     <ul class="flex flex-row">
       <li>
-        <span class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold mr-4 hover:bg-blue-700">
+        <span
+          class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold mr-4 hover:bg-blue-700"
+        >
+          <RouterLink to="/blackjack"> 21 Black Jack </RouterLink>
+        </span>
+        <span
+          class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold mr-4 hover:bg-blue-700"
+        >
           <RouterLink to="/hangman"> Ahorcado </RouterLink>
         </span>
-        <span class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700">
+        <span
+          class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700"
+        >
           <RouterLink to="/pokemon"> Pokémon </RouterLink>
         </span>
       </li>

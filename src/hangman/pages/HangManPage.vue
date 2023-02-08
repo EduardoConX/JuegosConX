@@ -20,10 +20,12 @@ const {
     <HangImage :attempts="attempts" />
     <h2 class="font-bold text-3xl mb-2">{{ hiddenWord }}</h2>
     <h3>Intentos fallidos: {{ attempts }}</h3>
-    <p class="font-bold" v-if="lose">
-      Usted ha perdido, la palabra era {{ word }}
-    </p>
-    <p class="font-bold" v-if="won">Usted ha ganado, felicidades</p>
+    <div class="h-8">
+      <p class="font-bold" v-if="lose">
+        Usted ha perdido, la palabra era {{ word }}
+      </p>
+      <p class="font-bold" v-if="won">Usted ha ganado, felicidades</p>
+    </div>
     <div class="my-4">
       <button
         v-for="letter in letters"

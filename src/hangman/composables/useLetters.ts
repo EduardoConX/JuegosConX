@@ -38,6 +38,7 @@ const newGame = () => {
     attempts.value = 0;
     lose.value = false;
     won.value = false;
+    usedLetters.value = [];
 };
 
 const useLetters = () => {

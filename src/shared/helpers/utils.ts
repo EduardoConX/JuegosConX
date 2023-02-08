@@ -1,0 +1,11 @@
+const waitForXSeconds = (seconds: number) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(true);
+        }, seconds * 1000);
+    });
+}
+
+export {
+    waitForXSeconds
+}

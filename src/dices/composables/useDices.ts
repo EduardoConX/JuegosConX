@@ -20,7 +20,8 @@ const toss = () => {
 const useDices = () => {
     return {
         dice1,
-        dice2, message,
+        dice2,
+        message,
         toss
     }
 }

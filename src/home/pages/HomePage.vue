@@ -24,6 +24,10 @@ const links = <Link[]>[
     route: "dices",
     name: "Dados",
   },
+  {
+    route: "simonSays",
+    name: "Simón Dice",
+  },
 ];
 </script>
 

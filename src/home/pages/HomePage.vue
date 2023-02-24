@@ -36,7 +36,7 @@ const links = <Link[]>[
     <ul class="flex flex-col md:flex-row">
       <li v-for="link in links" class="mb-8 md:mr-4">
         <span
-          class="py-2 px-4 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700"
+          class="btn-black"
         >
           <RouterLink :to="`/${link.route}`">{{ link.name }} </RouterLink>
         </span>

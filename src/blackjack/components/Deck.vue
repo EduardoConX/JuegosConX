@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <h2 class="text-2xl text-white mb-4 font-bold">
+  <h2 class="subtitle mb-4 font-bold">
     {{ props.player }}
     <small class="ml-4 text-base font-normal">{{ props.points }}</small>
   </h2>

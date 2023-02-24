@@ -38,18 +38,18 @@ const handleNext = () => {
 </script>
 
 <template>
-  <h1 class="text-center text-4xl font-bold text-white mb-4">
-    Nivel {{ level }}
-  </h1>
-  <h1 class="text-center text-4xl font-bold text-white" v-if="!pokemon">
+  <h1 class="title" v-if="!pokemon">
     Cargando...
   </h1>
   <div v-else>
-    <h1 class="text-center text-4xl font-bold text-white">
+    <h1 class="title mb-4">
       ¿Quién es este Pokémon?
     </h1>
+    <h2 class="subtitle text-center">
+      Nivel {{ level }}
+    </h2>
     <PokemonPicture :pokemon-id="pokemon.id" :show-pokemon="showPokemon" />
-    <h3 class="text-center text-2xl text-white mb-4 h-8">
+    <h3 class="text-center text-xl text-white mb-4 h-8">
       {{ message }}
     </h3>
     <PokemonOptions :pokemons="pokemons" @select-pokemon="checkAnswer" />

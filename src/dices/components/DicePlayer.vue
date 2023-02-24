@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
   <div class="text-center">
-    <h2 class="text-2xl text-white mb-4 font-bold">
+    <h2 class="subtitle mb-4">
       Jugador {{ props.player }}
     </h2>
     <img

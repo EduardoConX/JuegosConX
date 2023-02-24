@@ -20,10 +20,8 @@ const {
 
 <template>
   <div :class="`${hasLose ? 'animate__animated animate__flash' : ''}`">
-    <h1 class="text-center text-4xl font-bold text-white mb-4">Simón dice</h1>
-    <h2 class="text-2xl text-white text-center mb-4 font-bold h-8">
-      {{ message }} {{ level }}
-    </h2>
+    <h1 class="title mb-4">Simón dice</h1>
+    <h2 class="subtitle mb-4 text-center h-8">{{ message }} {{ level }}</h2>
     <div class="w-full flex justify-center">
       <GameButton
         @click="() => giveAnswer('green')"
@@ -40,7 +38,7 @@ const {
       />
     </div>
     <div class="w-full flex justify-center">
-      <button @click="newGame" class="text-4xl text-white">
+      <button @click="newGame" class="btn-black text-4xl text-white">
         {{ buttonText }}
       </button>
     </div>

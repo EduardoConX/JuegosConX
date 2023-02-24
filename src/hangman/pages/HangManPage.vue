@@ -16,7 +16,7 @@ const {
 </script>
 
 <template>
-  <div class="text-center text-white text-2xl">
+  <div class="subtitle text-center">
     <HangImage :attempts="attempts" />
     <h2 class="font-bold text-3xl mb-2">{{ hiddenWord }}</h2>
     <h3>Intentos fallidos: {{ attempts }}</h3>

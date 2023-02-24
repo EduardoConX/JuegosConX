@@ -33,7 +33,7 @@ const handleStop = () => {
 <template>
   <Deck player="Computadora" :cards="computerCards" :points="computerPoints" />
   <Deck player="Jugador 1" :cards="playerCards" :points="playerPoints" />
-  <h2 class="text-2xl text-white mb-4 font-bold h-8">{{ message }}</h2>
+  <h2 class="subtitle mb-4 h-8">{{ message }}</h2>
   <ul class="flex flex-row justify-evenly">
     <li>
       <button class="btn-black" @click="hadleRequest" :disabled="!playerTurn">

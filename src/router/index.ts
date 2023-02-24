@@ -6,6 +6,7 @@ import HangManPage from '../hangman/pages/HangManPage.vue';
 import PokemonPage from '../pokemon/pages/PokemonPage.vue';
 import BlackJackPage from '../blackjack/pages/BlackJackPage.vue';
 import DrumsPage from '../drums/pages/DrumsPage.vue';
+import DicesPage from '../dices/pages/DicesPage.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,7 @@ const router = createRouter({
         { path: '/pokemon', name: 'pokemon', component: PokemonPage },
         { path: '/blackjack', name: 'blackjack', component: BlackJackPage },
         { path: '/drums', name: 'drums', component: DrumsPage },
+        { path: '/dices', name: 'dices', component: DicesPage },
 
         //Default
         { path: '/:pathMatch(.*)*', redirect: () => ({ name: 'home' }) }

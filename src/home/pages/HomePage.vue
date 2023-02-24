@@ -20,6 +20,10 @@ const links = <Link[]>[
     route: "drums",
     name: "Batería",
   },
+  {
+    route: "dices",
+    name: "Dados",
+  },
 ];
 </script>
 

@@ -22,10 +22,19 @@ const useCards = () => {
   }
 
   const getHandValue = (card: Card, isPlayer = true) => {
+    const handValue = getCardValue(card)
     if (isPlayer) {
-      playerHandValue.value = playerHandValue.value + getCardValue(card)
+      playerHandValue.value += handValue
+
+      if (playerHandValue.value > 21 && card.value === 'A') {
+        playerHandValue.value -= 10
+      }
     } else {
-      dealerHandValue.value = dealerHandValue.value + getCardValue(card)
+      dealerHandValue.value += handValue
+
+      if (dealerHandValue.value > 21 && card.value === 'A') {
+        dealerHandValue.value -= 10
+      }
     }
   }
 

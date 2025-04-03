@@ -11,6 +11,8 @@ const {
   playerTurn,
   dealerTurn,
   gameResult,
+  gameOver,
+  resetGame,
 } = useCards()
 
 const hit = () => {
@@ -43,7 +45,13 @@ const stand = () => {
         <button @click="stand" class="btn bg-red-500 hover:bg-red-700" :disabled="!playerTurn">
           Stand
         </button>
-        <button class="btn bg-green-500 hover:bg-green-700">New Game</button>
+        <button
+          @click="resetGame"
+          class="btn bg-green-500 hover:bg-green-700"
+          :disabled="!gameOver"
+        >
+          New Game
+        </button>
       </div>
     </div>
   </div>

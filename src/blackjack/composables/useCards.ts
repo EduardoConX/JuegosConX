@@ -10,10 +10,16 @@ const useCards = () => {
   const playerHandValue = ref(0)
   const playerTurn = ref(true)
   const gameResult = ref('')
+  const gameOver = ref(false)
 
   onMounted(() => {
     deck = shuffleDeck()
   })
+
+  const requestCard = () => {
+    if (deck.length === 0) return
+    return deck.pop()
+  }
 
   const getHandValue = (card: Card, isPlayer = true) => {
     if (isPlayer) {
@@ -21,11 +27,6 @@ const useCards = () => {
     } else {
       dealerHandValue.value = dealerHandValue.value + getCardValue(card)
     }
-  }
-
-  const requestCard = () => {
-    if (deck.length === 0) return
-    return deck.pop()
   }
 
   const getWiner = () => {
@@ -38,6 +39,7 @@ const useCards = () => {
     } else {
       gameResult.value = 'Dealer wins'
     }
+    gameOver.value = true
   }
 
   const dealerTurn = async () => {
@@ -60,12 +62,14 @@ const useCards = () => {
     playerHandValue.value = 0
     playerTurn.value = true
     gameResult.value = ''
+    gameOver.value = false
   }
 
   watch(playerHandValue, () => {
     if (playerHandValue.value > 21) {
       playerTurn.value = false
       gameResult.value = 'Dealer wins'
+      gameOver.value = true
     }
   })
 
@@ -74,11 +78,12 @@ const useCards = () => {
     playerCards,
     dealerHandValue,
     playerHandValue,
+    playerTurn,
     getHandValue,
     requestCard,
-    playerTurn,
     dealerTurn,
     gameResult,
+    gameOver,
     resetGame,
   }
 }

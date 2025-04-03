@@ -34,3 +34,11 @@ export const getCardValue = (card: Card) => {
     return Number.parseInt(card.value)
   }
 }
+
+export const waitForXSeconds = (seconds: number) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true)
+    }, seconds * 1000)
+  })
+}

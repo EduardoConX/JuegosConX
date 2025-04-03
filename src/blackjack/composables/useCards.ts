@@ -1,6 +1,6 @@
 import { onMounted, ref, watch } from 'vue'
 import type { Card } from '../interfaces/Card'
-import { getCardValue, shuffleDeck } from '../utils'
+import { getCardValue, shuffleDeck, waitForXSeconds } from '../utils'
 
 const useCards = () => {
   let deck: Card[] = []
@@ -40,8 +40,9 @@ const useCards = () => {
     }
   }
 
-  const dealerTurn = () => {
+  const dealerTurn = async () => {
     do {
+      await waitForXSeconds(1)
       const card = requestCard()
       if (card) {
         dealerCards.value.push(card)

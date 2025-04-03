@@ -68,8 +68,7 @@ const useCards = () => {
   watch(playerHandValue, () => {
     if (playerHandValue.value > 21) {
       playerTurn.value = false
-      gameResult.value = 'Dealer wins'
-      gameOver.value = true
+      getWiner()
     }
   })
 

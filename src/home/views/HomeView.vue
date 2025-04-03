@@ -2,13 +2,14 @@
 import SideBar from '@/components/SideBar.vue'
 import FeaturedGame from '../components/FeaturedGame.vue'
 import { games } from '@/data/games';
+const featuredGame = games[Math.floor(Math.random() * games.length)];
 </script>
 
 <template>
   <div class="flex">
     <SideBar />
     <main class="flex-1 p-8">
-      <FeaturedGame />
+      <FeaturedGame :game="featuredGame" />
       <h2 class="text-2xl font-bold mb-6">Recently Added</h2>
       <div class="grid grid-cols-4 gap-6">
         <div v-for="(game, i) in games" :key="i" class="bg-[#1F1F1F] rounded-lg overflow-hidden">

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import GamesList from '@/components/GamesList.vue';
 import SideBar from '@/components/SideBar.vue'
 import { games } from '@/data/games';
 </script>
@@ -7,16 +8,7 @@ import { games } from '@/data/games';
     <div class="flex">
         <SideBar />
         <main class="flex-1 p-8">
-            <h1 class="text-2xl font-bold mb-6">All games</h1>
-            <div class="grid grid-cols-4 gap-6">
-                <div v-for="(game, i) in games" :key="i" class="bg-[#1F1F1F] rounded-lg overflow-hidden">
-                    <img :src="`Home/${game.img}.jpeg`" alt="game" class="w-full h-48 object-cover" />
-                    <div class="p-4">
-                        <h3 class="font-semibold mb-1">{{ game.title }}</h3>
-                        <p class="text-sm text-gray-400">{{ game.description }}</p>
-                    </div>
-                </div>
-            </div>
+            <GamesList title="All Games" :games="games" />
         </main>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import GamesList from '@/components/GamesList.vue';
-import SideBar from '@/components/SideBar.vue'
+import GamesList from '@/shared/components/GamesList.vue';
+import SideBar from '@/shared/components/SideBar.vue'
 import { games } from '@/data/games';
 </script>
 

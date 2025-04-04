@@ -19,7 +19,7 @@ const imageStyle = computed(() => ({
       <h1 class="text-4xl font-bold mb-2">{{ game.title }}</h1>
       <p class="text-gray-300 mb-4">{{ game.description }}</p>
       <RouterLink
-        to="blackjack"
+        :to="game.url"
         class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors w-36 text-center cursor-pointer"
       >
         Play Now

@@ -9,7 +9,7 @@ export const games = [
     title: "Guess the Pokemon",
     description: "Who's that Pokémon game",
     img: "Pokemon",
-    url: "/",
+    url: "pokemon",
   },
   {
     title: "Hangman",
@@ -21,6 +21,6 @@ export const games = [
     title: "BlackJack",
     description: "The classic card game",
     img: "BlackJack",
-    url: "/",
+    url: "/blackjack",
   },
 ];

@@ -1,5 +1,11 @@
 export const games = [
   {
+    title: 'Guess the Pokemon',
+    description: "Who's that Pokémon game",
+    img: 'Pokemon',
+    url: 'pokemon',
+  },
+  {
     title: 'Hangman',
     description: "Guess the word before it's too late",
     img: 'HangMan',
@@ -16,10 +22,6 @@ export const games = [
         description: "Follow orders and don't make mistakes.",
         img: 'Simon',
     },
-    {
-        title: 'Guess the Pokemon',
-        description: "Who's that Pokémon game",
-        img: 'Pokemon',
-    },
+
    , */
 ]

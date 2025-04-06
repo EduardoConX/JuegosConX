@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'hangman',
       component: () => import('../hangman/views/HangmanView.vue'),
     },
+    {
+      path: '/pokemon',
+      name: 'pokemon',
+      component: () => import('../pokemon/views/PokemonView.vue'),
+    },
   ],
 })
 

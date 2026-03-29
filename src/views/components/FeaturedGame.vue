@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Game } from "../../shared/interfaces/Game";
 import { computed } from "vue";
+import type { Game } from "@/shared/interfaces/Game";
 
 const props = defineProps<{
   game: Game;

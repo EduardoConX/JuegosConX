@@ -4,9 +4,9 @@ import JoystickIcon from './icons/JoystickIcon.vue'
 
 <template>
   <nav class="bg-[#1F1F1F] p-4 flex justify-between items-center">
-    <div class="flex items-center gap-2 text-green-500">
+    <RouterLink to="/" class="flex items-center gap-2 text-green-500">
       <JoystickIcon />
-      <RouterLink to="/" class="text-xl font-bold text-white">Juegos Con X</RouterLink>
-    </div>
+      <span class="text-xl font-bold text-white">Juegos Con X</span>
+    </RouterLink>
   </nav>
 </template>

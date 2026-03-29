@@ -4,7 +4,7 @@ import HomeIcon from './icons/HomeIcon.vue'
 
 const menuItems = [
   { id: 'home', icon: HomeIcon, label: 'Home', url: '/' },
-  { id: 'games', icon: JoystickIcon, label: 'Games', url: '/' },
+  { id: 'games', icon: JoystickIcon, label: 'Games', url: '/games' },
 ]
 </script>
 

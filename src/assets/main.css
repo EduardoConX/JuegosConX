@@ -1,5 +1,0 @@
-@import 'tailwindcss';
-
-.btn {
-  @apply py-2 px-8 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
-}

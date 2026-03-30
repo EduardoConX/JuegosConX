@@ -4,7 +4,7 @@ An interactive games collection built with **Vue 3**, **TypeScript**, and **Tail
 
 ## 🎯 Features
 
-- ✨ **Multiple games** — Blackjack, Hangman, Pokémon, and more
+- ✨ **Multiple games** — Blackjack, Hangman, Pokémon, Simon Says, and more
 - 🏗️ **Scalable architecture** — Each game is an independent module
 - 📘 **Full TypeScript** — Type-safe throughout the application
 - 🎨 **Tailwind CSS** — Modern and responsive styling
@@ -18,6 +18,7 @@ An interactive games collection built with **Vue 3**, **TypeScript**, and **Tail
 | **Blackjack** | Play the classic card game against the dealer |
 | **Hangman** | Guess the word letter by letter |
 | **Pokémon** | Search and discover Pokémon data via API |
+| **Simon Says** | Repeat the color sequence and advance through levels |
 
 ## 🛠️ Tech Stack
 
@@ -36,6 +37,7 @@ src/
 ├── blackjack/          # Blackjack module
 ├── hangman/            # Hangman module
 ├── pokemon/            # Pokémon module
+├── simonSays/          # Simon Says module
 ├── shared/             # Shared components
 │   ├── components/     # NavBar, SideBar, etc.
 │   └── interfaces/     # Global types

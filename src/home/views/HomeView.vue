@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SideBar from "@/shared/components/SideBar.vue";
-import FeaturedGame from "./components/FeaturedGame.vue";
+import FeaturedGame from "../components/FeaturedGame.vue";
 import GamesList from "@/shared/components/GamesList.vue";
 import { games } from "@/data/games";
 const featuredGame = games[Math.floor(Math.random() * games.length)];

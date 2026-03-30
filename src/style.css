@@ -1,5 +1,25 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .btn {
   @apply py-2 px-8 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.simon-btn {
+  @apply rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash-element {
+  animation: flash 1s infinite;
 }

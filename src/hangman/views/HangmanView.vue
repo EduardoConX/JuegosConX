@@ -8,7 +8,7 @@ const imageSource = computed(() => `hangman/${attempts.value}.png`);
 
 <template>
   <div class="text-center">
-    <img :src="imageSource" alt="hangman" class="mx-auto w-[250px]" />
+    <img :src="imageSource" alt="hangman" class="mx-auto w-62" />
     <h2 class="font-bold text-3xl mb-2">{{ hiddenWord }}</h2>
     <h3 class="text-2xl">Failed Attempts: {{ attempts }}</h3>
     <div class="h-8">

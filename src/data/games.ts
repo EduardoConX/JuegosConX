@@ -3,7 +3,7 @@ export const games = [
     title: "Simon Says",
     description: "Follow orders and don't make mistakes.",
     img: "Simon",
-    url: "/",
+    url: "simonSays",
   },
   {
     title: "Guess the Pokemon",

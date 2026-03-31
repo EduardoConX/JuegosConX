@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue';
 import { letters } from '../utils';
 import useLetters from '../composables/useLetter';
+import HangMan from '../components/HangMan.vue';
 const { attempts, hiddenWord, lose, won, randomWord, usedLetters, checkLetter, newGame } = useLetters()
-const imageSource = computed(() => `hangman/${attempts.value}.png`);
 </script>
 
 <template>
   <div class="text-center">
-    <img :src="imageSource" alt="hangman" class="mx-auto w-62" />
+    <HangMan :attempts="attempts" class="mx-auto" />
     <h2 class="font-bold text-3xl mb-2">{{ hiddenWord }}</h2>
     <h3 class="text-2xl">Failed Attempts: {{ attempts }}</h3>
     <div class="h-8">

@@ -8,6 +8,10 @@
   @apply rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
+.pokemon-btn {
+  @apply bg-green-500 text-black font-semibold;
+}
+
 @keyframes flash {
   0%,
   50%,
